@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TempTransfer</string>
+    <string name="inputname">輸入姓名</string>
+    <string name="send">送出</string>
+    <string name="textshow">顯示結果</string>
+
+</resources>
