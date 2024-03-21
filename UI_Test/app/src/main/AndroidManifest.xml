@@ -23,7 +23,7 @@
         </activity>
         <activity
             android:name=".second"
-            android:exported="true">
+            android:exported="false">
 
         </activity>
     </application>
