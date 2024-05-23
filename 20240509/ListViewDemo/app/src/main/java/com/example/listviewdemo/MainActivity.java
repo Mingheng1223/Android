@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -22,14 +23,14 @@ public class MainActivity extends AppCompatActivity {
         cities=getResources().getStringArray(R.array.cities);
         lv=findViewById(R.id.listview);
 
-        ArrayAdapter<String>adpList=new ArrayAdapter<>(this, android.R.layout.simple_list_item_2,cities);
-        lv.setAdapter(adpList);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 TextView output=findViewById(R.id.lblOutput);
                 output.setText("你是住在"+cities[position]);
+                Toast.makeText(MainActivity.this, "你是住在"+cities[position],
+                        Toast.LENGTH_SHORT).show();
             }
         });
     }
