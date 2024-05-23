@@ -14,7 +14,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity implements DialogInterface.OnClickListener {
+public class MainActivity extends AppCompatActivity implements DialogInterface.OnClickListener,DialogInterface.OnMultiChoiceClickListener {
     private  String[] items={"Apple","Samsung","Sony","Asus"};
     private boolean[] itemChecked={false,false,false,false};
     @Override
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
                         .setTitle("請勾選選項")
                         .setPositiveButton("確定",MainActivity.this)
                         .setNegativeButton("取消",MainActivity.this)
-                        .setMultiChoiceItems(items,itemChecked,null)
+                        .setMultiChoiceItems(items,itemChecked,MainActivity.this::onClick)
                         .show();
             }
         });
@@ -53,5 +53,11 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
                 Toast.makeText(this,"按下取消鍵！",Toast.LENGTH_SHORT).show();
                 break;
         }
+    }
+
+    @Override
+    public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+        Toast.makeText(MainActivity.this,items[which]+(isChecked?"勾選":"沒有勾選"),
+                Toast.LENGTH_SHORT).show();
     }
 }
