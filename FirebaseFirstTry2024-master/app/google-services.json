@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "733866477194",
+    "project_id": "fir-demo2024-b449d",
+    "storage_bucket": "fir-demo2024-b449d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733866477194:android:43b421cac6151611374f73",
+        "android_client_info": {
+          "package_name": "com.demo.firebasefirsttry"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnwNkQdGoUQtoRpyPbZYQQx3F_zJC6K2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733866477194:android:3e41065aba7d72ba374f73",
+        "android_client_info": {
+          "package_name": "com.example.firebasedemo2024"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnwNkQdGoUQtoRpyPbZYQQx3F_zJC6K2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
